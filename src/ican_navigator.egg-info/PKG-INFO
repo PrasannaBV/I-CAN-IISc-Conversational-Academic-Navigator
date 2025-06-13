@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ican_navigator
+Version: 0.1.0
+Requires-Dist: streamlit
+Requires-Dist: langchain
+Requires-Dist: python-dotenv
+Requires-Dist: langchain-community
+Requires-Dist: faiss-cpu
+Requires-Dist: PyMuPDF
+Requires-Dist: beautifulsoup4
+Requires-Dist: openai
+Requires-Dist: tiktoken
+Dynamic: requires-dist

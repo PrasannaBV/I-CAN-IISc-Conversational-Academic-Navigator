@@ -10,6 +10,8 @@ from config.settings import MODEL_NAME, TEMPERATURE, CHUNK_SIZE, CHUNK_OVERLAP, 
 from retrieval.agent_pipeline import initialize_agent_pipeline, load_agent_pipeline
 from langchain.docstore.document import Document
 
+from prompting.prompt_manager import get_enhanced_query, get_followup_suggestions
+
 
 def extract_text_from_pdf(file) -> list[Document]:
     """Extracts text from PDF file object and returns a list of Documents."""
@@ -56,18 +58,56 @@ def main() -> None:
             user_query = st.text_input("Type your question and press Enter:")
             submitted = st.form_submit_button("Send")
 
+        # Handle follow-up question selection
+        if 'selected_followup' in st.session_state:
+            user_query = st.session_state.selected_followup
+            del st.session_state.selected_followup  # Clear the selection
+            submitted = True  # Trigger processing
+
         if submitted and user_query and "agent" in st.session_state:
             with st.spinner("Thinking..."):
+                # Get relevant documents
                 docs = st.session_state.vs.similarity_search_with_score(user_query, k=5)
-                current_answer = st.session_state.agent.run(user_query)
+                
+                # Use prompt manager to enhance the query with context and appropriate prompting
+                enhanced_query = get_enhanced_query(user_query, docs)
+                
+                # Get response from agent using enhanced query
+                current_answer = st.session_state.agent.run(enhanced_query)
+                
+                # Store the conversation
                 st.session_state.chat_history.append((user_query, current_answer))
                 st.session_state.feedback_history.append("🤷 Not sure")
+                
+                # Get follow-up suggestions and store them
+                followups = get_followup_suggestions(user_query, current_answer)
+                if 'followup_suggestions' not in st.session_state:
+                    st.session_state.followup_suggestions = []
+                st.session_state.followup_suggestions.append(followups)
 
-        # Display chat + feedback
+        # Display chat + feedback with follow-up suggestions
         for idx, (user_msg, agent_msg) in enumerate(st.session_state.chat_history):
             st.markdown(f"**👤 You:** {user_msg}")
             st.markdown(f"**🤖 Agent:** {agent_msg}")
+            
+            # Show follow-up suggestions for the latest message
+            if (idx == len(st.session_state.chat_history) - 1 and 
+                'followup_suggestions' in st.session_state and 
+                idx < len(st.session_state.followup_suggestions)):
+                
+                followups = st.session_state.followup_suggestions[idx]
+                if followups:
+                    st.markdown("**💡 Suggested follow-up questions:**")
+                    cols = st.columns(min(len(followups), 2))  # Max 2 columns
+                    for i, suggestion in enumerate(followups[:4]):  # Show max 4 suggestions
+                        col_idx = i % 2
+                        with cols[col_idx]:
+                            if st.button(f"💬 {suggestion}", key=f"followup_{idx}_{i}", use_container_width=True):
+                                # Trigger a rerun with the selected suggestion
+                                st.session_state.selected_followup = suggestion
+                                st.rerun()
 
+            # Feedback section
             feedback_key = f"feedback_{idx}"
             st.session_state.feedback_history[idx] = st.radio(
                 "Was this response helpful?",
@@ -76,6 +116,8 @@ def main() -> None:
                 key=feedback_key,
                 horizontal=True
             )
+            
+            st.markdown("---")  # Separator between conversations
 
         # 📊 Feedback Summary
         if st.session_state.feedback_history:
@@ -181,6 +223,8 @@ def main() -> None:
             if st.button("🗑️ Clear Chat"):
                 st.session_state.chat_history = []
                 st.session_state.feedback_history = []
+                if 'followup_suggestions' in st.session_state:
+                    st.session_state.followup_suggestions = []
                 st.success("✅ Chat history and feedback cleared.")
                 #st.experimental_rerun()  # Force UI to refresh immediately
 

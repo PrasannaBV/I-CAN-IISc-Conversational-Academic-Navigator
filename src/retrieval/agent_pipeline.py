@@ -22,6 +22,12 @@ from langchain.agents import Tool, initialize_agent, AgentType
 from langchain.memory import ConversationBufferMemory
 from langchain.docstore.document import Document
 
+from prompting.prompt_templates import SYSTEM_PROMPT, ACADEMIC_PROMPTS
+
+
+from prompting.context_analyzer import ContextAnalyzer
+from prompting.prompt_templates import get_template_key, format_prompt
+
 # from langchain.chat_models import ChatOllama
 # from langchain.embeddings import OllamaEmbeddings
 
@@ -33,6 +39,151 @@ from langchain.embeddings import OpenAIEmbeddings
 # Import configuration constants
 from config.settings import FAISS_INDEX_PATH, MODEL_NAME, TEMPERATURE 
 
+# Initialize context analyzer globally
+context_analyzer = ContextAnalyzer()
+
+def create_enhanced_retrieval_tool(vector_store: FAISS, context_analyzer: ContextAnalyzer):
+    """
+    Create an enhanced retrieval tool that uses context analysis for better retrieval
+    """
+    def enhanced_retrieve_docs(query: str) -> str:
+        # Analyze query context
+        context_analysis = context_analyzer.analyze_complete_context(query)
+        
+        # Enhanced retrieval based on context
+        k = 5 if context_analysis.get("urgency") == "high" else 3
+        
+        # Get documents with scores
+        hits = vector_store.similarity_search_with_score(query, k=k)
+        
+        # Format results with context awareness
+        results = []
+        for doc, score in hits:
+            # Add relevance score for urgent queries
+            if context_analysis.get("urgency") == "high":
+                results.append(f"[Relevance: {1-score:.2f}] {doc.page_content}")
+            else:
+                results.append(doc.page_content)
+        
+        retrieved_content = "\n\n".join(results)
+        
+        # Log context for debugging
+        logging.info(f"Query context: {context_analysis.get('intents', [])} | Urgency: {context_analysis.get('urgency')}")
+        
+        return retrieved_content
+
+    return Tool(
+        name="enhanced_faiss_retriever",
+        func=enhanced_retrieve_docs,
+        description="Fetch relevant document chunks with context-aware retrieval for academic queries about IISc Masters programs."
+    )
+
+def create_context_aware_agent_prompt(context_analysis: dict, original_query: str) -> str:
+    """
+    Create context-aware system prompt for the agent based on query analysis
+    """
+    base_prompt = SYSTEM_PROMPT
+    
+    # Add context-specific instructions
+    context_additions = []
+    
+    if context_analysis.get("urgency") == "high":
+        context_additions.append("""
+🚨 URGENT QUERY HANDLING:
+- This query requires immediate attention
+- Prioritize time-sensitive information
+- Include specific deadlines and contact information
+- Use urgent language and clear action items
+""")
+    
+    if context_analysis.get("clarification", {}).get("needs_clarification"):
+        context_additions.append("""
+CLARIFICATION NEEDED:
+- The user's query is unclear or too vague
+- Ask specific clarifying questions before retrieving information
+- Provide options based on common student scenarios
+- Be patient and helpful in guiding them to clarity
+""")
+    
+    intents = context_analysis.get("intents", [])
+    if "admission" in intents:
+        context_additions.append("""
+ADMISSION FOCUS:
+- Prioritize admission deadlines and requirements
+- Include eligibility criteria and application processes
+- Mention document requirements and submission procedures
+""")
+    
+    if "fees" in intents:
+        context_additions.append("""
+FINANCIAL INFORMATION FOCUS:
+- Provide specific fee amounts and payment schedules
+- Include scholarship and financial aid information
+- Be sensitive to financial concerns
+""")
+    
+    # Combine base prompt with context additions
+    if context_additions:
+        enhanced_prompt = base_prompt + "\n\nCONTEXT-SPECIFIC INSTRUCTIONS:\n" + "\n".join(context_additions)
+    else:
+        enhanced_prompt = base_prompt
+    
+    return enhanced_prompt
+
+def process_query_with_context(agent, query: str, context_analyzer: ContextAnalyzer) -> str:
+    """
+    Process user query with context analysis and enhanced prompting
+    """
+    # Analyze query context
+    context_analysis = context_analyzer.analyze_complete_context(query)
+    
+    # Handle clarification needed cases
+    if context_analysis.get("clarification", {}).get("needs_clarification"):
+        template_key = get_template_key(context_analysis)
+        clarification_prompt = format_prompt(
+            template_key=template_key,
+            context_analysis=context_analysis,
+            retrieved_context="",
+            query=query
+        )
+        return clarification_prompt
+    
+    # For regular queries, let the agent handle with enhanced context
+    try:
+        # Create context-aware system message
+        enhanced_system_prompt = create_context_aware_agent_prompt(context_analysis, query)
+        
+        # Modify the agent's system message temporarily
+        original_system_message = None
+        if hasattr(agent, 'agent') and hasattr(agent.agent, 'llm_chain'):
+            # Store original system message if exists
+            prompt_template = agent.agent.llm_chain.prompt
+            if hasattr(prompt_template, 'messages') and prompt_template.messages:
+                for i, msg in enumerate(prompt_template.messages):
+                    if isinstance(msg, SystemMessage):
+                        original_system_message = msg
+                        # Update with enhanced prompt
+                        prompt_template.messages[i] = SystemMessage(content=enhanced_system_prompt)
+                        break
+        
+        # Run the agent with enhanced context
+        response = agent.run(query)
+        
+        # Restore original system message
+        if original_system_message and hasattr(agent, 'agent') and hasattr(agent.agent, 'llm_chain'):
+            prompt_template = agent.agent.llm_chain.prompt
+            if hasattr(prompt_template, 'messages'):
+                for i, msg in enumerate(prompt_template.messages):
+                    if isinstance(msg, SystemMessage):
+                        prompt_template.messages[i] = original_system_message
+                        break
+        
+        return response
+        
+    except Exception as e:
+        logging.error(f"Error in context-aware query processing: {e}")
+        # Fallback to regular agent processing
+        return agent.run(query)
 
 def load_agent_pipeline() -> Tuple[object, FAISS]:
     """
