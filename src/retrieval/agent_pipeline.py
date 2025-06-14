@@ -1,165 +1,134 @@
-from datetime import datetime
-import logging
+from typing import List, Tuple, Dict, Any
 import os
-from typing import List, Tuple
 
-from langchain.chat_models import ChatOpenAI
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.agents import Tool, initialize_agent, AgentType
-from langchain.memory import ConversationBufferMemory
-from langchain.docstore.document import Document
+from langchain_core.documents import Document
+from langchain_openai import ChatOpenAI
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS
+from langgraph.graph import END, StateGraph
 
 from config.settings import FAISS_INDEX_PATH, MODEL_NAME, TEMPERATURE
 
 
-# --- Weekly Digest Tool ---
-def create_weekly_digest_tool(vector_store) -> Tool:
-    def generate_digest(_query: str) -> str:
-        logging.info("🧠 [Digest Tool] Generating weekly digest.")
-        hits = vector_store.similarity_search("weekly update OR announcement OR deadline", k=10)
-        combined = "\n\n".join([doc.page_content for doc in hits])
-        prompt = f"""
-Summarize the following recent academic updates into weekly digest format.
-Group into: 📅 Deadlines, 📣 Announcements, 📝 Course-specific Updates.
-Only include updates from the past 7 days.
-
-TEXT:
-{combined}
-"""
-        llm = ChatOpenAI(model_name=MODEL_NAME, temperature=0.3)
-        return "📬 (via `weekly_digest_agent`) Weekly Digest:\n\n" + llm.predict(prompt)
-
-    return Tool(
-        name="weekly_digest_agent",
-        func=generate_digest,
-        description="Summarize weekly academic updates like deadlines and announcements."
-    )
-
-
-# --- Personal Planner Tool ---
-def create_personal_planner_tool(vector_store) -> Tool:
-    def generate_plan(query: str) -> str:
-        logging.info("🧠 [Planner Tool] Creating personalized academic plan.")
-        hits = vector_store.similarity_search(query, k=6)
-        content = "\n\n".join([doc.page_content for doc in hits])
-        prompt = f"""
-You are an academic planner. Based on the user's query and the provided text, identify any upcoming deadlines, especially related to specific courses like Machine Learning.
-
-Only include deadlines from the current or next week (today: {datetime.now().strftime('%Y-%m-%d')}).
-
-Respond clearly and only if a deadline is found.
-
----
-
-User Query:
-{query}
-
-Retrieved Text:
-{content}
-"""
-
-        llm = ChatOpenAI(model_name=MODEL_NAME, temperature=0.4)
-        return "📘 (via `personal_planner_agent`)\n\n" + llm.predict(prompt)
-
-    return Tool(
-        name="personal_planner_agent",
-        func=generate_plan,
-        description="Help students plan based on their course-specific deadlines, announcements, or progress queries."
-    )
-
-
-# --- Load Persistent Agent ---
-def load_agent_pipeline() -> Tuple[object, FAISS]:
-    embeddings = OpenAIEmbeddings()
-    vector_store = FAISS.load_local(
-        FAISS_INDEX_PATH,
-        embeddings,
-        allow_dangerous_deserialization=True
-    )
-
-    # Define tools
-    def retrieve_docs(query: str) -> str:
-        hits = vector_store.similarity_search_with_score(query, k=3)
-        return "\n\n".join([doc.page_content for doc, _ in hits])
-
-    retrieval_tool = Tool(
-        name="faiss_retriever",
-        func=retrieve_docs,
-        description="Fetch top 3 relevant document chunks for a query."
-    )
-
-    date_tool = Tool(
-        name="get_current_date",
-        func=lambda _: datetime.now().strftime("%Y-%m-%d"),
-        description="Returns the current date in YYYY-MM-DD format."
-    )
-
-    weekly_digest_tool = create_weekly_digest_tool(vector_store)
-    personal_planner_tool = create_personal_planner_tool(vector_store)
-
-    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
-    llm = ChatOpenAI(model_name=MODEL_NAME, temperature=TEMPERATURE)
-
-    agent = initialize_agent(
-        tools=[retrieval_tool, date_tool, weekly_digest_tool, personal_planner_tool],
-        llm=llm,
-        agent=AgentType.CHAT_CONVERSATIONAL_REACT_DESCRIPTION,
-        memory=memory,
-        verbose=True,
-        handle_parsing_errors=True
-    )
-
-    return agent, vector_store
-
-
-# --- Initialize Agent with New Documents ---
-def initialize_agent_pipeline(documents: List[Document]) -> Tuple[object, FAISS]:
-    llm = ChatOpenAI(model_name=MODEL_NAME, temperature=TEMPERATURE)
+def load_embeddings_and_store(documents: List[Document]) -> FAISS:
+    """Load or create FAISS vector store with embeddings."""
     embeddings = OpenAIEmbeddings()
 
     if os.path.exists(FAISS_INDEX_PATH):
-        logging.info("📁 Loading existing FAISS index from disk.")
-        vector_store = FAISS.load_local(FAISS_INDEX_PATH, embeddings, allow_dangerous_deserialization=True)
-        vector_store.add_documents(documents)
-        logging.info(f"➕ Added {len(documents)} new documents to existing index.")
+        vs = FAISS.load_local(
+            FAISS_INDEX_PATH, 
+            embeddings, 
+            allow_dangerous_deserialization=True
+        )
+        if documents:
+            vs.add_documents(documents)
     else:
-        logging.info("🆕 No FAISS index found. Creating new vector store.")
-        vector_store = FAISS.from_documents(documents, embeddings)
-        logging.info(f"✅ Created new index with {len(documents)} documents.")
+        vs = FAISS.from_documents(documents, embeddings)
 
-    vector_store.save_local(FAISS_INDEX_PATH)
-    logging.info(f"💾 Saved FAISS index to: {FAISS_INDEX_PATH}")
+    vs.save_local(FAISS_INDEX_PATH)
+    return vs
 
-    # Tools
-    def retrieve_docs(query: str) -> str:
-        hits = vector_store.similarity_search_with_score(query, k=3)
-        return "\n\n".join([doc.page_content for doc, _ in hits])
 
-    retrieval_tool = Tool(
-        name="faiss_retriever",
-        func=retrieve_docs,
-        description="Fetch top 3 relevant document chunks for a query."
+def initialize_agent_pipeline(documents: List[Document]) -> Tuple[StateGraph, FAISS]:
+    """Initialize the LangGraph agent pipeline with document retrieval capabilities."""
+    llm = ChatOpenAI(model=MODEL_NAME, temperature=TEMPERATURE)
+    vs = load_embeddings_and_store(documents)
+
+    # --- Node: Document Retriever ---
+    def retrieve_node(state: Dict[str, Any]) -> Dict[str, Any]:
+        """Retrieve relevant documents and generate answer."""
+        query = state.get("query", "")
+        docs = vs.similarity_search(query, k=3)
+        context = "\n\n".join(doc.page_content for doc in docs)
+
+        prompt = f"""You are a helpful academic assistant.
+
+Context:
+{context}
+
+Question:
+{query}
+"""
+        result = llm.invoke(prompt).content
+        return {**state, "answer": result}
+
+    # --- Node: Weekly Digest ---
+    def weekly_digest_node(state: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate weekly digest of announcements and deadlines."""
+        docs = vs.similarity_search("announcement OR deadline OR weekly", k=10)
+        context = "\n\n".join(doc.page_content for doc in docs)
+
+        prompt = f"""Summarize the following academic updates into:
+
+📅 Deadlines  
+📣 Announcements  
+📝 Course Updates
+
+Only include updates from the last 7 days.
+
+TEXT:
+{context}
+"""
+        result = llm.invoke(prompt).content
+        return {**state, "answer": "📬 Weekly Digest:\n\n" + result}
+
+    # --- Router Function ---
+    def router(state: Dict[str, Any]) -> str:
+        """Route to appropriate node based on query."""
+        query = state.get("query", "").lower()
+        if "weekly" in query or "digest" in query:
+            return "weekly_digest"
+        return "retriever"
+
+    # --- Build LangGraph ---
+    workflow = StateGraph(Dict[str, Any])
+    
+    # Add nodes
+    workflow.add_node("retriever", retrieve_node)
+    workflow.add_node("weekly_digest", weekly_digest_node)
+    
+    # Set entry point
+    workflow.set_entry_point("retriever")
+    
+    # Add conditional routing
+    workflow.add_conditional_edges(
+        "retriever",
+        router,
+        {
+            "retriever": END,  # Go to END after retrieval
+            "weekly_digest": "weekly_digest"  # Only go to digest if needed
+        }
     )
+    
+    # Weekly digest always ends after completion
+    workflow.add_edge("weekly_digest", END)
 
-    date_tool = Tool(
-        name="get_current_date",
-        func=lambda _: datetime.now().strftime("%Y-%m-%d"),
-        description="Returns the current date."
-    )
+    # Compile the graph
+    graph = workflow.compile()
+    return graph, vs
 
-    weekly_digest_tool = create_weekly_digest_tool(vector_store)
-    personal_planner_tool = create_personal_planner_tool(vector_store)
 
-    memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+def load_agent_pipeline() -> Tuple[StateGraph, FAISS]:
+    """Load the agent pipeline without adding new documents."""
+    return initialize_agent_pipeline([])
 
-    agent = initialize_agent(
-        tools=[retrieval_tool, date_tool, weekly_digest_tool, personal_planner_tool],
-        llm=llm,
-        agent=AgentType.CHAT_CONVERSATIONAL_REACT_DESCRIPTION,
-        memory=memory,
-        verbose=True,
-        handle_parsing_errors=True
-    )
 
-    return agent, vector_store
+# Example usage:
+if __name__ == "__main__":
+    # Initialize with sample documents if needed
+    sample_docs = [
+        Document(page_content="Assignment due Friday", metadata={"date": "2023-11-10"}),
+        Document(page_content="Midterm exam next week", metadata={"date": "2023-11-15"})
+    ]
+    
+    # Initialize or load pipeline
+    graph, vectorstore = initialize_agent_pipeline(sample_docs)
+    
+    # Example queries
+    result1 = graph.invoke({"query": "What are my upcoming deadlines?"})
+    print("Regular query result:")
+    print(result1["answer"])
+    
+    result2 = graph.invoke({"query": "Show me the weekly digest"})
+    print("\nWeekly digest result:")
+    print(result2["answer"])

@@ -59,7 +59,11 @@ def main() -> None:
         if submitted and user_query and "agent" in st.session_state:
             with st.spinner("Thinking..."):
                 docs = st.session_state.vs.similarity_search_with_score(user_query, k=5)
-                current_answer = st.session_state.agent.run(user_query)
+                #current_answer = st.session_state.agent.run(user_query)
+                result = st.session_state.agent.invoke({"query": user_query})
+                current_answer = result.get("answer", "⚠️ No response generated.")
+
+
                 st.session_state.chat_history.append((user_query, current_answer))
                 st.session_state.feedback_history.append("🤷 Not sure")
 
