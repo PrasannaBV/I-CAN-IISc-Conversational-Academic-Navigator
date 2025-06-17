@@ -1,6 +1,10 @@
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
+
 from ingestion.website_processor import fetch_and_process_website
 import streamlit as st
-import os
+
 import csv
 import io
 import pandas as pd
