@@ -9,7 +9,7 @@ and ChatOllama/ChatOpenAI as the underlying language model, with conversational 
 Functions:
 - initialize_agent_pipeline: builds and returns the Agent and its vector store.
 """
-
+from reward.scorer import score_answer
 from datetime import datetime
 import logging
 import os
@@ -168,6 +168,15 @@ def process_query_with_context(agent, query: str, context_analyzer: ContextAnaly
         
         # Run the agent with enhanced context
         response = agent.run(query)
+        # ---   SCORE THE ANSWER WITH YOUR REWARD MODEL -----------------------------
+        reward_score = score_answer(response)  
+        print(reward_score) 
+        logging.info(f"🎯 Reward-model score: {reward_score:.3f}")   
+        if reward_score < 0.30:                                    
+            response += (                                           
+                "\n\n⚠️ *This answer may be unclear. "               
+                "Feel free to rephrase or ask for more details.*"   
+            )  
         
         # Restore original system message
         if original_system_message and hasattr(agent, 'agent') and hasattr(agent.agent, 'llm_chain'):
