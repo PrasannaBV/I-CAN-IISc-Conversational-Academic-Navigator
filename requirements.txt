@@ -37,7 +37,6 @@ httplib2==0.22.0
 httpx==0.28.1
 httpx-sse==0.4.0
 huggingface-hub==0.32.4
--e git+https://github.com/PrasannaBV/I-CAN-IISc-Conversational-Academic-Navigator.git@d2eddb3df741e7fe011b26478986500240c5a22a#egg=ican_navigator
 idna==3.10
 Jinja2==3.1.6
 jiter==0.10.0
