@@ -5,6 +5,8 @@ import csv
 import io
 import pandas as pd
 import fitz  # to chunk pdf
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from config.settings import MODEL_NAME, TEMPERATURE, CHUNK_SIZE, CHUNK_OVERLAP, FAISS_INDEX_PATH
 from retrieval.agent_pipeline import initialize_agent_pipeline, load_agent_pipeline
