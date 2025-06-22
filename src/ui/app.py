@@ -9,6 +9,12 @@ Features:
 - Interactive question input and retrieval-augmented responses.
 - Sidebar displays current configuration parameters.
 """
+import sys
+import os
+
+# Add /mount/src/i-can-iisc-conversational-academic-navigator/src to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 
 from typing import List, Tuple
 import streamlit as st
