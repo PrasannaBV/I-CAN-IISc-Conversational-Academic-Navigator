@@ -23,6 +23,48 @@ from prompting.prompt_templates import get_template_key, format_prompt
 # from langchain.embeddings import OllamaEmbeddings
 
 
+import requests
+import json
+
+def get_course_info_tool(course_code: str) -> str:
+    payload = {
+        "jsonrpc": "2.0",
+        "method": "get_course_info",
+        "params": {"course_code": course_code.strip()},
+        "id": 1
+    }
+    try:
+        response = requests.post(
+            "http://localhost:5001",
+            json=payload,
+            headers={"Content-Type": "application/json"},
+            timeout=5
+        )
+        
+        
+        data = response.json()
+        
+        if "error" in data:
+            error_msg = data["error"].get("message", "Unknown error")
+            error_detail = data["error"].get("data", "")
+            return f" {error_msg}" + (f" ({error_detail})" if error_detail else "")
+            
+        result = data.get("result", {})
+        if not result or "title" not in result:
+            return " Course information not found or incomplete"
+            
+        return (
+            f" {result['title']} (Credits: {result['credits']})\n"
+            f" Instructor: {result['instructor']}\n"
+            f" Semester: {result['semester']}"
+        )
+    except requests.exceptions.RequestException as e:
+        return f" Connection error: {str(e)}"
+    except json.JSONDecodeError:
+        return " Invalid response from server"
+    except Exception as e:
+        return f" Unexpected error: {str(e)}"
+
 # --- Weekly Digest Tool ---
 def create_weekly_digest_tool(vector_store) -> Tool:
     def generate_digest(_query: str) -> str:
@@ -274,6 +316,22 @@ def load_agent_pipeline() -> Tuple[object, FAISS]:
         description="Fetch top 3 relevant document chunks for a query."
     )
 
+    mcp_course_tool = Tool(
+    name="get_course_info",
+    func=get_course_info_tool,
+    description="""**EXCLUSIVELY** use this for ANY query containing:
+    - Course codes (e.g., 'CS101', 'EE202')
+    - Requests for course details (title, instructor, credits, schedule)
+    - Questions like 'Who teaches X?', 'What is X about?', 'When is X offered?'
+    
+    **Input MUST be:**
+    - An **exact** capitalized course code (e.g., 'CS101', not 'cs101')
+    - Extracted **verbatim** from the user's query
+    
+    **Never use this for:**
+    - General questions (use `faiss_retriever`)
+    - Non-course-related queries"""
+    )
     date_tool = Tool(
         name="get_current_date",
         func=lambda _: datetime.now().strftime("%Y-%m-%d"),
@@ -287,7 +345,7 @@ def load_agent_pipeline() -> Tuple[object, FAISS]:
     llm = ChatOpenAI(model_name=MODEL_NAME, temperature=TEMPERATURE)
 
     agent = initialize_agent(
-        tools=[retrieval_tool, date_tool, weekly_digest_tool, personal_planner_tool],
+        tools=[mcp_course_tool,retrieval_tool, date_tool, weekly_digest_tool, personal_planner_tool],
         llm=llm,
         agent=AgentType.CHAT_CONVERSATIONAL_REACT_DESCRIPTION,
         memory=memory,
@@ -333,6 +391,23 @@ def initialize_agent_pipeline(documents: List[Document]) -> Tuple[object, FAISS]
         description="Returns the current date."
     )
 
+    mcp_course_tool = Tool(
+    name="get_course_info",
+    func=get_course_info_tool,
+    description="""**EXCLUSIVELY** use this for ANY query containing:
+    - Course codes (e.g., 'CS101', 'EE202')
+    - Requests for course details (title, instructor, credits, schedule)
+    - Questions like 'Who teaches X?', 'What is X about?', 'When is X offered?'
+    
+    **Input MUST be:**
+    - An **exact** capitalized course code (e.g., 'CS101', not 'cs101')
+    - Extracted **verbatim** from the user's query
+    
+    **Never use this for:**
+    - General questions (use `faiss_retriever`)
+    - Non-course-related queries"""
+    )
+
     gmail_tool = create_gmail_tool()
     calendar_tool = create_calendar_tool()
 
@@ -342,7 +417,7 @@ def initialize_agent_pipeline(documents: List[Document]) -> Tuple[object, FAISS]
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
     agent = initialize_agent(
-        tools=[retrieval_tool, date_tool, weekly_digest_tool, personal_planner_tool, gmail_tool, calendar_tool],
+        tools=[mcp_course_tool,retrieval_tool, date_tool, weekly_digest_tool, personal_planner_tool, gmail_tool, calendar_tool],
         llm=llm,
         agent=AgentType.CHAT_CONVERSATIONAL_REACT_DESCRIPTION,
         memory=memory,
