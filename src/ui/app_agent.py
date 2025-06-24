@@ -38,7 +38,7 @@ def main() -> None:
                 agent, vs = load_agent_pipeline()
                 st.session_state.agent = agent
                 st.session_state.vs = vs
-                st.info("✅ Agent loaded from persistent vector store.")
+                #st.info("✅ Agent loaded from persistent vector store.")
             except Exception as e:
                 st.error(f"❌ Failed to load agent: {e}")
         else:
