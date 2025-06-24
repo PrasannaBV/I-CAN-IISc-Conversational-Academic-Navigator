@@ -1,0 +1,1357 @@
+[
+  {
+    "question": "I am on maternity leave. How can it impact my academics?",
+    "ground_truth": "Women can avail a maternity leave as per Institute policy in case of maternity during the programme, in addition to the above. A registration fee needs to be paid for the break semesters to keep the registration alive. They can complete the couse in 5 years if maternity leave is availed",
+    "answer": "If you are on maternity leave, it will provide you with additional time equal to the duration of your approved maternity leave to complete your comprehensive examination. Additionally, you will be permitted an extra year to submit your thesis or complete your program. However, please note that the fellowship will not be paid for this extended duration."
+  },
+  {
+    "question": "Help me find a project mentor. I am interested in subjects related to AI",
+    "ground_truth": "Professors working in AI-related areas include those focused on Machine Learning, Deep Learning, Natural Language Processing, and related subfields. Some examples are Ambedkar Dukkipati (NLP), Vinay Namboodiri (Explainable AI), and Chiranjib Bhattacharyya (Machine Learning).",
+    "answer": "You can reach out to Rajesh at the email address rajeshs@IISc.ac.in for mentorship on projects related to AI. He has expertise in applications of AI and ML in communication networking, among other topics."
+  },
+  {
+    "question": "Who is the instructor for the course 'Applied Reinforcement Learning'?",
+    "ground_truth": "Sreekanth Annapureddy",
+    "answer": "I'm sorry, the information is not available in the provided documents."
+  },
+  {
+    "question": "What is the number of credits for the course 'Time Series Analysis'?",
+    "ground_truth": "2",
+    "answer": "I'm sorry, the information is not available in the provided documents."
+  },
+  {
+    "question": "Which courses are offered in the AI stream during Summer 2025?",
+    "ground_truth": "Applied Reinforcement Learning; Graph Neural Networks; Generative AI; Time Series Analysis; AI for Robotics",
+    "answer": "I'm sorry, the information is not available in the provided documents."
+  },
+  {
+    "question": "What topics of expertise does Prof. Ambedkar Dukkipati have?",
+    "ground_truth": "Natural language processing with knowledge graphs",
+    "answer": "Prof. Ambedkar Dukkipati has expertise in the following topics: \n1. Natural language processing with knowledge graphs\n2. Learning to navigate with reinforcement learning\n3. Machine learning in low data regime"
+  },
+  {
+    "question": "How many students are assigned to Prof. Ambedkar Dukkipati?",
+    "ground_truth": "3",
+    "answer": "Prof. Ambedkar Dukkipati has 4 students assigned to him."
+  },
+  {
+    "question": "What is the deadline to drop a course in the Summer 2025 term?",
+    "ground_truth": "The deadline to drop a course is June 5, 2025.",
+    "answer": "The deadline to drop a course in the Summer 2025 term is from 04.06.2025 to 13.06.2025 for course dropping with mention, and from 11.05.2025 to 30.05.2025 for course dropping without mention."
+  },
+  {
+    "question": "When is the summer break or semester end vacation scheduled?",
+    "ground_truth": "The semester ends on August 2, 2025, followed by a short break.",
+    "answer": "I'm sorry, the information is not available in the provided documents."
+  },
+  {
+    "question": "How to choose a faculty mentor for summer term projects?",
+    "ground_truth": "You can select a mentor based on your area of interest. Contact details and project domains are provided in the Faculty Mentor List.",
+    "answer": "To choose a faculty mentor for summer term projects, you will need to propose your project topic in consultation with your Guide from within the organization. Once you have your topic, an IISc faculty mentor will approve the project goals. The faculty mentor will then provide high-level feedback on the project and its progress."
+  },
+  {
+    "question": "Which professors are working in the AI domain and how can I contact them?",
+    "ground_truth": "The following professors are involved in AI-related projects:\n\n1. **Prof. Ambedkar Dukkipati** (CSA)\n   - Email: ambedkar@iisc.ac.in\n   - Website: https://www.csa.iisc.ac.in/~ambedkar/\n\n2. **Prof. Chiranjib Bhattacharyya** (CSA)\n   - Email: chiru@iisc.ac.in\n   - Website: https://cds.iisc.ac.in/faculty/chiranjib/\n\n3. **Prof. R Venkatesh Babu** (EECS)\n   - Email: venky@iisc.ac.in\n   - Website: https://vision.cps.iisc.ac.in/\n\nAll of them are mentoring projects in AI subdomains like deep learning, computer vision, and NLP.",
+    "answer": "The professors working in the AI domain are:\n\n1. **Rajesh S.** \n   - Email: rajeshs@IISc.ac.in\n   - Topics of Expertise: Applications of AI and ML in communication networking; Short-term fairness in WiFi systems; Data analytics for data-driven decision frameworks; Market mechanisms for resource provisioning in software-defined networks.\n\n2. **Simmhan** \n   - Email: simmhan@iisc.ac.in\n   - Topics of Expertise: Abstractions, algorithms and applications for distributed data and computing systems; Cloud computing; AI on the Edge; Big Data platforms; Internet of Things (IoT); Temporal graph processing; UAVs."
+  },
+  {
+    "question": "What is the minimum CGPA required to remain enrolled in the M.Tech (Online) program?",
+    "ground_truth": "Students must maintain a minimum CGPA of 5.0 to continue in the program.",
+    "answer": "The minimum CGPA required to remain enrolled in the M.Tech (Online) program is 4.0 after the first term, with a minimum TGPA of 3.5 required in the first term."
+  },
+  {
+    "question": "How many F grades are allowed during the entire program?",
+    "ground_truth": "Only two F grades are permitted during the program.",
+    "answer": "Only two F grades are permitted in the entire programme. If a third F grade is obtained, the registration will be terminated."
+  },
+  {
+    "question": "Can I drop a course mid-semester?",
+    "ground_truth": "Yes, but dropping a course requires approval from the course instructor and faculty mentor and must adhere to the timeline specified in the handbook.",
+    "answer": "Yes, you can drop a course mid-semester, but it requires the approval of your advisor/research supervisor (as applicable) and the course instructor. Additionally, you must ensure that dropping the course does not bring your total number of credits below the minimum stipulated. If you drop the course during the designated 'course drop without mention' period, it will not appear on your final transcript. If you are in the first year of an Int. PhD program, you should consult with the coordinator, and in subsequent years, you need to consult both your supervisor and the coordinator."
+  },
+  {
+    "question": "Is attendance mandatory for terminal examinations?",
+    "ground_truth": "Yes, attendance for terminal examinations is compulsory. Absence may result in an F grade.",
+    "answer": "Yes, attendance in the terminal examination is compulsory. Students who are absent will be awarded zero marks and an 'F' grade. Absence on medical grounds may be condoned with proper certification."
+  },
+  {
+    "question": "What is the structure of the M.Tech (Online) program in terms of credit requirements?",
+    "ground_truth": "The program includes 12 credits of core courses, 20 credits of electives, and 32 credits for the project.",
+    "answer": "The M.Tech (Online) program has a total of 20 credits for coursework and 28 credits for the project work."
+  },
+  {
+    "question": "When can a student begin working on their project?",
+    "ground_truth": "Students may begin the project only after completing all core course credits.",
+    "answer": "A student can begin working on their project after successfully completing all the core courses."
+  },
+  {
+    "question": "Can M.Tech (Online) students transfer to a PhD program?",
+    "ground_truth": "No, transfers or upgrades to a PhD program are not permitted during the M.Tech (Online) program.",
+    "answer": "Yes, motivated M.Tech (Online) students have the option to transfer to a PhD program upon the completion of two terms, provided they meet the minimum CGPA requirement of 8.0."
+  },
+  {
+    "question": "Who retains intellectual property rights for project work?",
+    "ground_truth": "IPR typically belongs to the sponsoring company unless guidance from IISc faculty is involved, in which case an IPR agreement must be signed.",
+    "answer": "In general, if the guidance is only from the sponsoring company and IISc’s role is restricted to approval of goals and evaluation, the intellectual property rights (IPR) rest with the sponsoring company. However, if guidance from the IISc faculty mentor is sought by the company, a specific IPR agreement for the retainer consultancy will be negotiated, and the agreement must be signed before the guidance begins."
+  },
+  {
+    "question": "What are the conditions for project evaluation?",
+    "ground_truth": "Project evaluation is conducted by a faculty mentor based on milestones, deliverables, and periodic reviews. Company guides may also be involved.",
+    "answer": "The conditions for project evaluation include having an assigned faculty mentor who will approve the project goals, conduct regular evaluations as per the schedule indicated by the PCC, and ensure the necessary academic rigor. The faculty mentor will also provide high-level feedback on the project and its progress, while the student must propose the project topic in consultation with their Guide from within the organization. The final evaluation will occur in the 3rd term, along with the completion of the remaining 12 project credits."
+  },
+  {
+    "question": "What happens if a student does not meet the academic performance criteria in the first term?",
+    "ground_truth": "Students with a TGPA below 4.0 in the first term are subject to academic probation or discontinuation as outlined in the handbook.",
+    "answer": "If a student does not meet the academic performance criteria in the first term, specifically if their TGPA falls between 4.0 and less than 5.0, they will be advised to register for fewer courses in the following semester (if more than one course is credited). Additionally, students must achieve a minimum TGPA of 4.0/10.0 in the first term, and failure to satisfy this requirement could lead to discontinuation from the course."
+  },
+  {
+    "question": "What is the role of the company guide and faculty mentor in project evaluation?",
+    "ground_truth": "The company guide oversees internal progress while the faculty mentor ensures academic rigor and conducts evaluations.",
+    "answer": "The company guide offers active feedback and close support during the project evaluation. The evaluation committee, which includes both the faculty mentor and the company guide, is appointed by the PCC."
+  },
+  {
+    "question": "Who is the instructor for the course 'Reinforcement Learning' and what are the prerequisites?",
+    "ground_truth": "Prof. N. Viswanadham teaches Reinforcement Learning with prerequisites in probability and linear algebra.",
+    "answer": "The instructor for the course 'Reinforcement Learning' is Prof. Shalabh Bhatnagar. There are no prerequisites for this course."
+  },
+  {
+    "question": "List the elective courses shared between AI and DSBA programs.",
+    "ground_truth": "Elective courses common to AI and DSBA include Data Mining, Reinforcement Learning, and Causal Inference.",
+    "answer": "The elective courses shared between the AI and DSBA programs are:\n\n1. Financial Analytics\n2. Probabilistic Machine Learning: Theory and Applications\n3. Data Mining\n4. Artificial Intelligence for Medical Image Analysis\n5. Tensor computations for Data Science\n6. Applied Artificial Intelligence in Healthcare"
+  },
+  {
+    "question": "What is the evaluation scheme for the course 'Deep Learning for Visual Analytics'?",
+    "ground_truth": "Deep Learning for Visual Analytics is evaluated through assignments, midterm, and a final project.",
+    "answer": "The evaluation scheme for the course 'Deep Learning for Visual Analytics' (DS 265o) is as follows:\n\n- Projects: 35%\n- Assignments: 25%\n- Mid-Term Exam: 20%\n- End-Term Exam: 20%"
+  },
+  {
+    "question": "What are the core courses for the 2025 batch in the AI M.Tech (Online) program?",
+    "ground_truth": "Core courses (16 credits) for the 2025 batch include: Random Processes (3:1), Linear Algebra (3:1), Linear and Non-linear Optimization (3:1), Machine Learning (3:1).",
+    "answer": "The core courses for the 2025 batch in the AI M.Tech (Online) program are:\n\n1. Random Processes (3:1)\n2. Linear Algebra (3:1)\n3. Linear and Non-linear Optimization (3:1)\n4. Machine Learning (3:1)"
+  },
+  {
+    "question": "How is the capstone project structured for AI students in the 2025 batch?",
+    "ground_truth": "The capstone project for 2025 is 28 credits over three terms: 4 credits in Term 1 for topic identification, 12 in Term 2 with midterm evaluation, and 12 in Term 3 for final evaluation. The project is jointly guided by a company mentor and an IISc faculty mentor.",
+    "answer": "I'm sorry, the information is not available in the provided documents."
+  },
+  {
+    "question": "What are some example electives in the AI M.Tech (Online) program?",
+    "ground_truth": "Sample electives include: Data Analytics, Reinforcement Learning, Deep Generative Models, Data Structures and Graph Analytics, Cryptography, Deep Learning for Robotics, and Edge and Cloud Systems for ML.",
+    "answer": "Some example electives in the AI M.Tech (Online) program include:\n\n- Financial Analytics\n- Probabilistic Machine Learning: Theory and Applications\n- Data Mining\n- Artificial Intelligence for Medical Image Analysis\n- Tensor computations for Data Science\n- Applied Artificial Intelligence in Healthcare\n- Foundations of Robotics\n- Deep Learning for Visual Analytics\n- Data Structures and Graph Analytics\n- Data Analytics\n- Introduction to Cryptography\n- Reinforcement Learning\n- Deep Generative Models\n- Edge and Cloud Systems for Machine Learning Algorithms\n- Deep Learning for Robotics\n- Quantum Computing Methods: Theory and Applications"
+  },
+  {
+    "question": "What’s the difference in project credits between 2023 and 2025 batches?",
+    "ground_truth": "The 2025 batch has 28 project credits, while the 2023 batch has 27. In 2025, 4 credits are in Term 1, whereas in 2023, it’s 3 credits.",
+    "answer": "The project credits for the 2023 batch are 27 credits, while for the 2025 batch, the project credits remain the same at 27 credits. Therefore, there is no difference in project credits between the 2023 and 2025 batches."
+  },
+  {
+    "question": "Who provides project guidance in the AI M.Tech (Online) program?",
+    "ground_truth": "Project guidance is provided by an in-house company Guide and an IISc faculty mentor. The mentor approves goals and leads evaluations; the company Guide provides close day-to-day support.",
+    "answer": "In the AI M.Tech (Online) program, project guidance is provided by an IISc faculty mentor who offers high-level feedback on the project and its progress. Additionally, an in-house Company Guide from the student's organization offers active feedback and close support."
+  },
+  {
+    "question": "When can a student begin the project work in the ECE M.Tech (Online) program?",
+    "ground_truth": "Students can begin the second term of the project only after completing all prior courses in earlier semesters.",
+    "answer": "A student can begin the project work in the ECE M.Tech (Online) program after all courses are completed in prior semesters. The project involves a two-term structure, with 10 credits in the first term followed by a mid-term evaluation, and 18 credits in the second term with a final-term evaluation. The second-term project is taken up only after completing the necessary coursework."
+  },
+  {
+    "question": "What kind of professionals is the ECE M.Tech (Online) program designed for?",
+    "ground_truth": "It is designed for early-career professionals with 2–10 years of experience to strengthen fundamentals and learn cutting-edge topics.",
+    "answer": "The ECE M.Tech (Online) program is designed for early-career professionals with 2-10 years of experience."
+  },
+  {
+    "question": "Which department offers the ECE M.Tech (Online) courses?",
+    "ground_truth": "The courses are offered online by the faculty from the Department of ECE at IISc.",
+    "answer": "The ECE M.Tech (Online) courses are offered by the Department of Electrical Communication Engineering (ECE) within the Division of Electrical, Electronics, and Computer Sciences (EECS)."
+  },
+  {
+    "question": "How many total core course credits are there for the August 2022 batch in ECE?",
+    "ground_truth": "There are 15 core course credits for the August 2022 batch.",
+    "answer": "The total core course credits for the August 2022 batch in ECE are 15 credits."
+  },
+  {
+    "question": "What evaluation components are included in the ECE project structure?",
+    "ground_truth": "The project includes a midterm evaluation after the first term and a final evaluation after the second term.",
+    "answer": "The evaluation components included in the ECE project structure are as follows:\n\n1. A mid-term evaluation after the first term of the project, which carries 10 credits.\n2. A final-term evaluation after the second term of the project, which carries 18 credits.\n\nThe evaluation committee for the project includes the faculty mentor and the company guide, and it is appointed by the Programme Curriculum Committee (PCC)."
+  },
+  {
+    "question": "How many credits are required for the capstone project in the DSBA M.Tech (Online) program?",
+    "ground_truth": "The capstone project carries 32 credits.",
+    "answer": "The capstone project in the Data Science and Business Analytics (DSBA) M.Tech (Online) program requires 32 credits."
+  },
+  {
+    "question": "When can DSBA students begin their project work?",
+    "ground_truth": "Students can begin the three-term project after successfully completing all core courses.",
+    "answer": "DSBA students can begin their project work after successfully completing all the core courses. They can start the three-term project for 32 credits at that point."
+  },
+  {
+    "question": "Which departments offer courses in the DSBA M.Tech (Online) program?",
+    "ground_truth": "Courses are offered by faculty from the Departments of Computational and Data Sciences, Management Studies, CiSTUP, and RBCCPS.",
+    "answer": "The courses in the DSBA M.Tech (Online) program are offered by faculty members from the Departments of Computational and Data Sciences (CDS), Management Studies, Cyber Physical Systems (RBCCPS), and the Centre for Infrastructure, Sustainable Transportation and Urban Planning (CiSTUP)."
+  },
+  {
+    "question": "What are the core courses for the 2024 batch in the DSBA program?",
+    "ground_truth": "The core courses are Data Science in Practice, Data Engineering at Scale, and Probabilistic Machine Learning: Theory and Applications.",
+    "answer": "The core courses for the 2024 batch in the DSBA program are:\n\n1. DA 204o: Data Science in Practice (3:1)\n2. DA 218o: Probabilistic Machine Learning: Theory and Applications (3:1)\n3. DA 231o: Data Engineering at Scale (3:1)"
+  },
+  {
+    "question": "Are DSBA students allowed to take electives from other streams?",
+    "ground_truth": "Yes, students may take courses from any of the three streams as electives.",
+    "answer": "I'm sorry, the information is not available in the provided documents."
+  },
+  {
+    "question": "What is the credit structure of the DSBA project phases?",
+    "ground_truth": "Students complete 20 project credits over two terms followed by a midterm evaluation, and 12 project credits in the final term.",
+    "answer": "The credit structure of the DSBA project phases is as follows:\n\n- The project is for a total of 32 credits.\n- Students will complete 20 project credits over two terms followed by a mid-term evaluation.\n- The remaining 12 project credits will be completed in an exclusive semester for the final-term evaluation."
+  },
+  {
+    "question": "Can a project be completed by a group of students?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The project must be done individually."
+  },
+  {
+    "question": "How many students can one internal guide supervise?",
+    "answer": "One internal guide can supervise at most 6 students.",
+    "ground_truth": "One internal guide can supervise at most 6 students."
+  },
+  {
+    "question": "What is required if a student cannot find a faculty mentor despite effort?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Students may contact PCC with proof of outreach, project plan, and guide details."
+  },
+  {
+    "question": "Who decides what constitutes an acceptable project thesis?",
+    "answer": "The acceptable project thesis is decided by the student in consultation with their Guide from within the organization, and it must be approved by an IISc faculty mentor. The faculty mentor will also provide high-level feedback on the project and its progress.",
+    "ground_truth": "The faculty mentor advises on what constitutes a good and acceptable thesis."
+  },
+  {
+    "question": "What is needed before a faculty mentor can provide technical guidance with IP implications?",
+    "answer": "Before a faculty mentor can provide technical guidance with IP implications, both the faculty mentor for the project and the organisational guide must be identified prior to the start of the project. Additionally, if guidance from the IISc faculty mentor is sought by the company, a specific IPR agreement for the retainer consultancy must be negotiated and signed before the guidance begins.",
+    "ground_truth": "An IPR agreement should be negotiated before the project begins."
+  },
+  {
+    "question": "What happens if a faculty mentor is on sabbatical?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "A new faculty mentor may be appointed with PCC approval."
+  },
+  {
+    "question": "When must the project proposal be submitted?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The project proposal must be submitted before the drop without mention date of Phase 1."
+  },
+  {
+    "question": "What are the consequences of not submitting the project proposal by the deadline?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Failure to submit requires dropping the project; otherwise, an F grade is given."
+  },
+  {
+    "question": "How long is a student expected to work weekly for 8 project credits?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "8 project credits roughly translate to 8 hours of weekly work."
+  },
+  {
+    "question": "What documents must be submitted before the final project evaluation?",
+    "answer": "Before the final project evaluation, the following documents must be submitted:\n\n1. Oral examination report (with comments of reviewers) and check sheet duly signed by the Research Supervisor and the oral examiner(s) on SAP.\n2. Invitation Letter/Acceptance letter (with date and place).\n3. Abstract & Title (if applicable).\n4. Registration details.\n5. Undertaking form.\n6. An estimate of the travel expense details in the form of a pre-payment screenshot.\n7. A research proposal prepared in consultation with the research supervisors.\n8. A certificate of adequacy of scientific facilities available at the candidate’s organization.",
+    "ground_truth": "The thesis report should be submitted before the final evaluation."
+  },
+  {
+    "question": "Can the company guide attend the project evaluation online?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The student and the company guide may attend the evaluation online."
+  },
+  {
+    "question": "What grade is assigned to projects?",
+    "answer": "The minimum pass grade for the project work is a ‘D’ grade. A student who secures an ‘F’ grade will be given an opportunity to work again on the project.",
+    "ground_truth": "The project will be given a Pass or Fail grade."
+  },
+  {
+    "question": "Are DSBA students allowed to take courses in the summer project term?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "No other course credits are allowed in the summer term for DSBA students."
+  },
+  {
+    "question": "How many project credits are completed in Phase 2 for the ECE stream?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "ECE students must register for 18 credits in Phase 2."
+  },
+  {
+    "question": "In which terms can ECE students take Phase 2?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Phase 2 for ECE must be taken in the AUG or JAN term."
+  },
+  {
+    "question": "How soon must AI students identify their faculty mentor?",
+    "answer": "AI students must identify their faculty mentor prior to the start of the project.",
+    "ground_truth": "AI students should identify a mentor within 4 weeks of the start of the term."
+  },
+  {
+    "question": "Are elective courses recommended in Phase 1 of the AI stream?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Students are encouraged to take electives related to their project in Phase 1."
+  },
+  {
+    "question": "What must students check before submitting their thesis?",
+    "answer": "Before submitting their thesis, students must check the following:\n\n1. They should be aware of the academic guidelines of the Institute.\n2. They must check the document for plagiarism.\n3. The thesis must be an original work.",
+    "ground_truth": "Students must check their thesis for plagiarism using tools like Turnitin."
+  },
+  {
+    "question": "Can confidential information be included in the final public thesis?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Confidential information should not be placed in the thesis."
+  },
+  {
+    "question": "Who owns IP if the project is guided only by the company?",
+    "answer": "If the project is guided only by the sponsoring company, the Intellectual Property Rights (IPR) rest with the sponsoring company.",
+    "ground_truth": "Any IP generated under sole company guidance belongs to the company."
+  },
+  {
+    "question": "What is the key academic requirement before starting the M.Tech. project?",
+    "answer": "The key academic requirement before starting the M.Tech. project is that the candidate should have not less than 7.5 in their academic performance, along with the identification of both a faculty mentor for the project and an organisational guide prior to the start of the project. Additionally, the PhD research topic should align with the courses taken during the first year of the M. Tech/MDes/M. Tech (Sponsored) to fulfill the Research Training Programme (RTP) requirements.",
+    "ground_truth": "Students must have completed all core course credits in prior terms before starting their project."
+  },
+  {
+    "question": "Who monitors the student's progress during the project from the company side?",
+    "answer": "The in-house company Guide monitors the student's progress during the project from the company side.",
+    "ground_truth": "The internal guide will be responsible for monitoring the project progress on a regular basis."
+  },
+  {
+    "question": "What is the minimum qualification for an internal company guide?",
+    "answer": "The minimum qualification for an internal company guide is either a PhD or five years of experience post-Masters.",
+    "ground_truth": "The internal guide must have a Ph.D. degree or a Master’s degree with 5 years of experience."
+  },
+  {
+    "question": "Who approves the project goals and work plan?",
+    "answer": "The project goals and work plan are approved by both the assigned faculty mentor and the PCC (Project Coordination Committee). The faculty mentor will approve the project goals and timelines, while the PCC is responsible for approving the project goals as well.",
+    "ground_truth": "The faculty mentor will be responsible for approving the project goals and work plan."
+  },
+  {
+    "question": "What should a project proposal include?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The proposal should include motivation, problem statement, technical approach, feasibility, and timeline."
+  },
+  {
+    "question": "What is the composition of the mid-term evaluation committee?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The mid-term evaluation will be conducted by the internal guide, faculty mentor, and one PCC-nominated member."
+  },
+  {
+    "question": "How many phases are there in the DSBA stream project?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "DSBA projects are completed over three consecutive terms: Phase 1, 2, and 3."
+  },
+  {
+    "question": "How many project credits must DSBA students take in the summer term?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "DSBA students must register for 12 project credits in the summer term."
+  },
+  {
+    "question": "What is the total project credit requirement for ECE students?",
+    "answer": "The total project credit requirement for ECE students is either 32 credits for the three-term project or 28 credits for the two-term project, depending on the specific project chosen.",
+    "ground_truth": "ECE stream students must complete 28 project credits over two phases."
+  },
+  {
+    "question": "When should ECE students avoid doing Phase 2?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Phase 2 should not be taken in the summer as 18 project credits are not allowed in summer."
+  },
+  {
+    "question": "How many credits are assigned to Phase 1 in the AI stream project?",
+    "answer": "Students can complete 4 project credits in the 1st term to identify the topic in the AI stream project.",
+    "ground_truth": "Phase 1 in the AI stream project consists of 3 project credits."
+  },
+  {
+    "question": "What is expected within 4 weeks of starting Phase 1 in AI stream?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Students must finalize the problem statement and mentor within 4 weeks of Phase 1."
+  },
+  {
+    "question": "What must be submitted before the drop-without-mention deadline?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "These documents must be submitted before the drop-without-mention deadline."
+  },
+  {
+    "question": "What document must the internal guide submit before evaluations?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The internal guide must submit a Progress Report before evaluations."
+  },
+  {
+    "question": "How is the final evaluation committee different from the mid-term one?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The final evaluation includes the internal guide, faculty mentor, and two PCC-nominated members."
+  },
+  {
+    "question": "Can the student and guide attend evaluations online?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The student and company guide may attend the evaluation online."
+  },
+  {
+    "question": "Are letter grades assigned to project credits?",
+    "answer": "Project grading will be Pass/Fail, and the project grade will not be included in the overall grading. Therefore, letter grades are not assigned to project credits.",
+    "ground_truth": "Projects receive Pass or Fail grades, not letter grades."
+  },
+  {
+    "question": "What is required before submitting the project thesis?",
+    "answer": "Before submitting the project thesis, a student may need to have their thesis reviewed by a committee. This committee consists of the Chair of the department, two faculty members from the department, and the Research Supervisor(s) for M. Tech (Res). Additionally, if a student wishes to submit their thesis without a guide, they must request a committee to be set up by the Deans in consultation with the Chairperson of the department. All submissions and related processes are conducted through the designated portal.",
+    "ground_truth": "Students must check for plagiarism and certify originality before thesis submission."
+  },
+  {
+    "question": "Can confidential data be included in the public thesis?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Confidential information should not be placed in the public project thesis."
+  },
+  {
+    "question": "How many students can one faculty mentor guide?",
+    "answer": "One faculty mentor can guide either 1 or 2 students, as indicated by the number of students assigned to each mentor in the provided information.",
+    "ground_truth": "One faculty mentor can guide up to 6 students across batches."
+  },
+  {
+    "question": "What happens if the faculty mentor goes on sabbatical?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "A suitable alternate mentor can be appointed with PCC approval."
+  },
+  {
+    "question": "Is publication mandatory for completing the project?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Publications are encouraged but not mandatory."
+  },
+  {
+    "question": "Can project work continue with a new internal guide?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "An alternate internal guide can be appointed with PCC approval and a new undertaking."
+  },
+  {
+    "question": "When should students initiate the IPR agreement process?",
+    "answer": "Students should initiate the IPR agreement process before guidance by the IISc faculty mentor begins. The agreement must be negotiated and signed after informing the PCC.",
+    "ground_truth": "The IPR agreement should be initiated one term before project registration."
+  },
+  {
+    "question": "Who owns the IP if only the company guides the student?",
+    "answer": "If only the company guides the student, the Intellectual Property (IP) rests with the sponsoring company.",
+    "ground_truth": "IP generated under sole company guidance belongs to the company."
+  },
+  {
+    "question": "When is the Phase 1 project credit registration deadline for AI & DSBA?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Phase 1 project credit registration for AI & DSBA is due on 07.05.2025."
+  },
+  {
+    "question": "How is the Phase 1 project credit registration submitted for AI & DSBA?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Phase 1 credit registration is done via MS Forms shared by IKEN."
+  },
+  {
+    "question": "What is the deadline for Phase 1 project proposal and workplan submission for AI & DSBA?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The Phase 1 proposal and workplan for AI & DSBA are due by 30.05.2025."
+  },
+  {
+    "question": "When is the Phase 1 project credit registration for ECE?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Phase 1 project credit registration for ECE is on 07.05.2025."
+  },
+  {
+    "question": "What is the deadline for Phase 1 project proposal and workplan submission for ECE?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "ECE Phase 1 proposal and workplan must be submitted by 14.05.2025."
+  },
+  {
+    "question": "What is the last date to drop the project without mention?",
+    "answer": "The last date to drop a course without mention in the transcript is 30.05.2025.",
+    "ground_truth": "Project drop without mention is allowed until 30.05.2025."
+  },
+  {
+    "question": "What is the deadline to drop a project with mention?",
+    "answer": "The deadline to drop a project with mention is from 04.06.2025 to 13.06.2025.",
+    "ground_truth": "Project drop with mention is allowed until 13.06.2025."
+  },
+  {
+    "question": "When is the midterm evaluation completion deadline for ECE Phase 1 and AI & DSBA Phase 2?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Midterm project evaluation must be completed by 05.07.2025."
+  },
+  {
+    "question": "What is the deadline to submit the midterm evaluation signed form?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The midterm signed evaluation form must be submitted by 08.07.2025."
+  },
+  {
+    "question": "When is the final report submission deadline for Phase 3 projects in AI & DSBA?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Final Phase report (Turnitin) for AI & DSBA is due on 21.06.2025."
+  },
+  {
+    "question": "What platform is used to check the final project report for plagiarism?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Turnitin is used for the final project report submission."
+  },
+  {
+    "question": "What is the deadline for completing the final phase project evaluation in AI & DSBA?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Final Phase project evaluation must be completed by 30.06.2025."
+  },
+  {
+    "question": "When must the signed final phase evaluation form be submitted?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The signed final evaluation form is due by 02.07.2025."
+  },
+  {
+    "question": "What is the PCC grade entry deadline for final phase projects?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Final Phase Project PCC grade entry must be completed by 04.07.2025."
+  },
+  {
+    "question": "Which platform is used for Phase 3 project registration?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Phase 3 registration is done using SAP/SLcM."
+  },
+  {
+    "question": "Who is the instructor for the course E2 251o?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "A. Chockalingam is the instructor for E2 251o."
+  },
+  {
+    "question": "What is the credit structure of E1 316o?",
+    "answer": "The credit structure of E1 316o: Deep Learning for Robotics is 2 credits for lectures and 1 credit for practical work, totaling 3 credits (2:1).",
+    "ground_truth": "E1 316o has a credit structure of 2:1."
+  },
+  {
+    "question": "Which stream does course DA 225o belong to?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "DA 225o belongs to the DSBA stream."
+  },
+  {
+    "question": "On which days is E2 276o scheduled?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "E2 276o is scheduled on Mon, Wed & Fri."
+  },
+  {
+    "question": "What is the Teams code for E2 251o?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The Teams code for E2 251o is g9v3tk4."
+  },
+  {
+    "question": "Who are the instructors for E1 316o?",
+    "answer": "The instructors for E1 316o Deep Learning for Robotics are Dr. Shishir N. Y. Kolathaya, Dr. Pushpak Jagtap, Dr. Ravi Prakash, and RBCCPS.",
+    "ground_truth": "E1 316o is taught by Shishir N Y, Pushpak, and Ravi."
+  },
+  {
+    "question": "What is the Moodle enrolment key for DA 225o?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The Moodle enrolment key for DA 225o is Deep@learn."
+  },
+  {
+    "question": "What is the class timing for E2 251o?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "E2 251o is held from 5:30 PM to 7:00 PM on Mon, Wed & Fri."
+  },
+  {
+    "question": "Who is the course TA for E2 276o?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Twinkle is the course TA for E2 276o."
+  },
+  {
+    "question": "Which platform link hosts the E1 316o course?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "E1 316o is hosted at https://courses.iisc.ac.in/course/view.php?id=196"
+  },
+  {
+    "question": "Which division offers the M.Tech (Online) program in ECE?",
+    "answer": "The M.Tech (Online) program in ECE is offered by the Division of Electrical, Electronics, and Computer Sciences (EECS).",
+    "ground_truth": "The Division of Electrical, Electronics, and Computer Sciences offers the ECE program."
+  },
+  {
+    "question": "What is the typical experience level targeted by the ECE program?",
+    "answer": "The Electronics and Communication Engineering (ECE) program targets early-career professionals with 2-10 years of experience.",
+    "ground_truth": "The program is designed for early-career professionals with 2–10 years of experience."
+  },
+  {
+    "question": "What is the total credit requirement for core courses in the 2023 ECE batch?",
+    "answer": "The total credit requirement for core courses in the 2023 ECE batch is 16 credits.",
+    "ground_truth": "The August 2023 batch requires 16 core course credits."
+  },
+  {
+    "question": "Which core course is included in all batches from 2021 to 2023?",
+    "answer": "The core course included in all batches from 2021 to 2023 is \"Data Engineering at Scale.\"",
+    "ground_truth": "Random Processes is a core course common to all batches."
+  },
+  {
+    "question": "How many elective credits are required in the 2021 ECE batch?",
+    "answer": "The 2021 ECE batch requires at least 20 credits of elective courses.",
+    "ground_truth": "The 2021 batch must complete at least 24 elective credits."
+  },
+  {
+    "question": "What is the credit structure for 'Linear Algebra' in the 2023 batch?",
+    "answer": "In the 2023 batch, the credit structure for 'Linear Algebra' is 3 credits with a lab component of 1, making it a total of 3:1.",
+    "ground_truth": "Linear Algebra has a 3:1 credit structure for the 2023 batch."
+  },
+  {
+    "question": "Which core course is unique to the 2021 ECE curriculum?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Detection and Estimation is included only in the 2021 batch."
+  },
+  {
+    "question": "What is the total credit for the ECE project?",
+    "answer": "The total credit for the ECE project is 32 credits.",
+    "ground_truth": "The project is worth 28 credits in total."
+  },
+  {
+    "question": "How many project credits are completed in the first term?",
+    "answer": "In the first term, students complete either 4 project credits, 3 project credits, or 20 project credits, depending on the specific project structure they are following.",
+    "ground_truth": "Students complete 10 project credits in the first term."
+  },
+  {
+    "question": "When can the second term of the ECE project be taken?",
+    "answer": "The second term of the ECE project can be taken only after all courses are completed in prior semesters. Additionally, the second term project is taken up after the first Comprehensive Examination (CE), and the student must propose the topic in consultation with their Guide from within the organization and an IISc within two months from the date of the first CE.",
+    "ground_truth": "The second term project starts only after all courses are completed."
+  },
+  {
+    "question": "Who approves the goals of the ECE capstone project?",
+    "answer": "The goals of the ECE capstone project are approved by an assigned faculty mentor.",
+    "ground_truth": "An IISc faculty mentor approves the project goals."
+  },
+  {
+    "question": "What role does the in-house company guide play?",
+    "answer": "The in-house company guide offers active feedback and close support during the evaluations.",
+    "ground_truth": "The company guide offers active feedback and close support."
+  },
+  {
+    "question": "Which committee appoints the evaluation team for the project?",
+    "answer": "The evaluation committee, which includes the faculty mentor and company guide, is appointed by the PCC.",
+    "ground_truth": "The evaluation committee is appointed by the PCC."
+  },
+  {
+    "question": "Name a sample elective course in the ECE curriculum related to machine learning.",
+    "answer": "A sample elective course in the ECE curriculum related to machine learning is \"Machine Learning for Wireless Communication.\"",
+    "ground_truth": "Machine Learning for Wireless Communication is a sample elective."
+  },
+  {
+    "question": "Who teaches the ECE online courses?",
+    "answer": "The ECE online courses are taught by faculty from the Department of Electronics and Communication Engineering (ECE).",
+    "ground_truth": "The courses are taught online by faculty from the Department of ECE."
+  },
+  {
+    "question": "How many core course credits are required in the 2024 DSBA curriculum?",
+    "answer": "In the 2024 DSBA curriculum, 12 core course credits are required.",
+    "ground_truth": "Core courses for the 2024 batch total 12 credits."
+  },
+  {
+    "question": "What is the total credit requirement for the DSBA project?",
+    "answer": "The total credit requirement for the DSBA project is 32 credits.",
+    "ground_truth": "The DSBA project is worth 32 credits."
+  },
+  {
+    "question": "When can students begin the DSBA project?",
+    "answer": "Students can begin the DSBA project after successfully completing all the core courses.",
+    "ground_truth": "Students can begin the project after completing all core courses."
+  },
+  {
+    "question": "How many project credits are completed before the final evaluation?",
+    "answer": "Before the final evaluation, 20 project credits are completed over two terms, followed by a mid-term evaluation.",
+    "ground_truth": "20 project credits are completed before the final evaluation."
+  },
+  {
+    "question": "What is the credit distribution for the final semester project evaluation?",
+    "answer": "The credit distribution for the final semester project evaluation consists of 12 project credits. This is part of the two-term project where students complete a total of 28 project credits, with the final evaluation taking place in the third term.",
+    "ground_truth": "The final evaluation happens in an exclusive semester for 12 project credits."
+  },
+  {
+    "question": "Name a core course in the 2024 batch DSBA curriculum.",
+    "answer": "A core course in the 2024 batch DSBA curriculum is \"Data Science in Practice (3:1).\"",
+    "ground_truth": "Data Science in Practice is a core course in the 2024 batch."
+  },
+  {
+    "question": "Which course appears as a core subject in both the 2023 and 2024 batches?",
+    "answer": "The course that appears as a core subject in both the 2023 and 2024 batches is \"Data Engineering at Scale.\"",
+    "ground_truth": "Data Science in Practice is a core course for both 2023 and 2024 batches."
+  },
+  {
+    "question": "What elective covers financial topics in the DSBA curriculum?",
+    "answer": "The elective course that covers financial topics in the DSBA curriculum is \"Financial Analytics.\"",
+    "ground_truth": "Financial Analytics is an elective course."
+  },
+  {
+    "question": "What elective focuses on healthcare AI applications?",
+    "answer": "The elective that focuses on healthcare AI applications is \"Applied Artificial Intelligence in Healthcare.\"",
+    "ground_truth": "Applied Artificial Intelligence in Healthcare is a listed elective."
+  },
+  {
+    "question": "How many elective credits must a DSBA student take at minimum?",
+    "answer": "A DSBA student must take a minimum of 20 elective credits.",
+    "ground_truth": "Students must take a minimum of 20 elective credits."
+  },
+  {
+    "question": "Which course appears as an elective but is a core course in 2023?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Applied AI is an elective but also a core course in the 2023 batch."
+  },
+  {
+    "question": "Can students take electives from other streams?",
+    "answer": "Yes, students can take electives from other streams. They may take elective courses from any of the three streams.",
+    "ground_truth": "Students may also take electives from any of the three streams."
+  },
+  {
+    "question": "What is a sample elective related to network science?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Linear optimization and Network science is a listed elective."
+  },
+  {
+    "question": "Which batch includes 'Introduction to Computing for AI & ML' as a core course?",
+    "answer": "The batch that includes 'Introduction to Computing for AI & ML' as a core course is the 2021 and 2022 batch.",
+    "ground_truth": "Introduction to Computing for AI & ML is a core course for 2021 and 2022 batches."
+  },
+  {
+    "question": "Who approves the DSBA project goals?",
+    "answer": "The DSBA project goals are approved by the PCC and the sponsoring faculty mentor.",
+    "ground_truth": "Project goals are approved by the IISc faculty mentor."
+  },
+  {
+    "question": "Who provides close support for the DSBA project?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The company guide offers active feedback and close support."
+  },
+  {
+    "question": "Which committee appoints the DSBA evaluation committee?",
+    "answer": "The evaluation committee for the DSBA is appointed by the PCC.",
+    "ground_truth": "The evaluation committee is appointed by the PCC."
+  },
+  {
+    "question": "What is a core course for the 2021 and 2022 batches related to data science?",
+    "answer": "A core course for the 2021 and 2022 batches related to data science is \"DA 202o: Introduction to Data Science.\"",
+    "ground_truth": "Introduction to Data Science is a core course for the 2021 and 2022 batches."
+  },
+  {
+    "question": "Is Data Mining listed as a DSBA elective?",
+    "answer": "Yes, Data Mining is listed as a DSBA elective.",
+    "ground_truth": "Data Mining is included as an elective course."
+  },
+  {
+    "question": "What is the credit structure of core courses like Data Engineering at Scale?",
+    "answer": "The credit structure for the core course \"Data Engineering at Scale\" is as follows:\n\n- For the 2024 batch onwards: 4 credits (3:1)\n- For the 2023 batch: 4 credits (3:1)\n- For the 2021 and 2022 batches: The specific credit value is not provided in the context.\n\nIf you need further details about a specific batch, please let me know!",
+    "ground_truth": "Courses such as Data Engineering at Scale have a 3:1 credit structure."
+  },
+  {
+    "question": "What is the minimum number of elective credits required?",
+    "answer": "The minimum number of elective credits required is 20 credits.",
+    "ground_truth": "Students must take at least 21 elective credits."
+  },
+  {
+    "question": "How many credits is the project worth?",
+    "answer": "The project is worth either 32 credits, 28 credits, or 27 credits, depending on the specific project structure after successfully completing all the core courses.",
+    "ground_truth": "The project is worth 27 credits."
+  },
+  {
+    "question": "When can a student begin the project?",
+    "answer": "A student can begin the project after successfully completing all the core courses.",
+    "ground_truth": "Students may start the project after successfully completing all the core courses."
+  },
+  {
+    "question": "How many project credits are completed in the first term?",
+    "answer": "In the first term, students complete either 4 project credits, 3 project credits, or 20 project credits, depending on the specific project structure they are following.",
+    "ground_truth": "Students complete 3 project credits in the 1st term."
+  },
+  {
+    "question": "Which course covers reinforcement learning?",
+    "answer": "The courses that cover reinforcement learning are:\n\n1. E1 277o Reinforcement Learning, which focuses specifically on reinforcement learning techniques and their applications.\n2. E1 316o Deep Learning for Robotics, which includes reinforcement learning as part of its syllabus related to robotic systems.\n3. E0 270o Machine Learning, which includes reinforcement learning as one of its topics within the broader context of machine learning.",
+    "ground_truth": "E1 277o is the course on Reinforcement Learning."
+  },
+  {
+    "question": "What is the credit structure of elective courses like DA 201o and DS 216o?",
+    "answer": "DA 201o: Applied AI: Building Practical and Scalable ML Systems is an elective course worth 3 credits. DS 216o: Applied Artificial Intelligence in Healthcare is also an elective course worth 3 credits.",
+    "ground_truth": "Each elective course like DA 201o has a 3:1 credit structure."
+  },
+  {
+    "question": "Who approves the project goals?",
+    "answer": "The project goals are approved by the faculty mentor and the PCC (Project Coordination Committee).",
+    "ground_truth": "The project goals are approved by an IISc faculty mentor."
+  },
+  {
+    "question": "What role does the in-house company guide play?",
+    "answer": "The in-house company guide offers active feedback and close support during the evaluations.",
+    "ground_truth": "The in-house company guide offers active feedback and close support."
+  },
+  {
+    "question": "How many core course credits are required for 2021 and 2022 batches?",
+    "answer": "For the 2021 and 2022 batches, a total of 14 core course credits are required.",
+    "ground_truth": "The core courses total 14 credits."
+  },
+  {
+    "question": "Which committee appoints the project evaluation committee?",
+    "answer": "The project evaluation committee is appointed by the PCC.",
+    "ground_truth": "The evaluation committee is appointed by the Programme Curriculum Committee (PCC)."
+  },
+  {
+    "question": "When is Makar Sankranti in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Makar Sankranti is on January 14, 2025, which falls on a Tuesday."
+  },
+  {
+    "question": "On what day does Republic Day fall in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Republic Day falls on a Sunday in 2025."
+  },
+  {
+    "question": "What is the date of Id-ul-Fitr in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Id-ul-Fitr is on March 31, 2025, which is a Monday."
+  },
+  {
+    "question": "Which holiday falls on April 10, 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Mahavir Jayanti is on April 10, 2025."
+  },
+  {
+    "question": "What holiday is observed on May 12, 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Budha Purnima is observed on May 12, 2025."
+  },
+  {
+    "question": "When is Bakrid (Id-ul-Zuha) in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Bakrid is on June 7, 2025, which is a Saturday."
+  },
+  {
+    "question": "Which holiday is on August 15, 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Independence Day is on August 15, 2025."
+  },
+  {
+    "question": "What is the date of Dussehra in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Dussehra is on October 1, 2025."
+  },
+  {
+    "question": "On which day does Diwali fall in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Diwali falls on a Monday in 2025."
+  },
+  {
+    "question": "When is Christmas celebrated in 2025?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Christmas is on December 25, 2025, which is a Thursday."
+  },
+  {
+    "question": "How many students are assigned to Aditya Gopalan?",
+    "answer": "Aditya Gopalan has 3 students assigned to him.",
+    "ground_truth": "Aditya Gopalan is guiding 3 students."
+  },
+  {
+    "question": "What is the email ID of Ambedkar Dukkipati?",
+    "answer": "The email ID of Ambedkar Dukkipati is ambedkar@iisc.ac.in.",
+    "ground_truth": "Ambedkar Dukkipati's email ID is ambedkar@iisc.ac.in."
+  },
+  {
+    "question": "Who is the faculty mentor with the email css@iisc.ac.in?",
+    "answer": "The faculty mentor with the email css@iisc.ac.in is Chandra Sekhar Seelamantula.",
+    "ground_truth": "css@iisc.ac.in belongs to Chandra Sekhar Seelamantula."
+  },
+  {
+    "question": "How many students is Chandra Sekhar Seelamantula currently guiding?",
+    "answer": "Chandra Sekhar Seelamantula is currently guiding 5 students.",
+    "ground_truth": "Chandra Sekhar Seelamantula is assigned 5 students."
+  },
+  {
+    "question": "What is the full name of the mentor with email prathore@iisc.ac.in?",
+    "answer": "The full name of the mentor with email prathore@iisc.ac.in is Punit Rathore.",
+    "ground_truth": "prathore@iisc.ac.in is the email of Punit Rathore."
+  },
+  {
+    "question": "Which faculty member is guiding the maximum number of students?",
+    "answer": "The faculty member guiding the maximum number of students is Ratikanta Behera, with 6 students assigned to him.",
+    "ground_truth": "Punit Rathore is guiding the maximum of 6 students."
+  },
+  {
+    "question": "What is the student count under Shalabh Bhatnagar?",
+    "answer": "The student count under Shalabh Bhatnagar is 3.",
+    "ground_truth": "Shalabh Bhatnagar is assigned 3 students."
+  },
+  {
+    "question": "Is any mentor guiding more than 6 students?",
+    "answer": "No, all faculty mentors are guiding 6 students or fewer. The maximum number of students assigned to a mentor is 6, and the only mentor with more than 6 students is not listed in the provided information.",
+    "ground_truth": "No faculty mentor is guiding more than 6 students."
+  },
+  {
+    "question": "How many students is Ambedkar Dukkipati mentoring?",
+    "answer": "Ambedkar Dukkipati is mentoring 4 students.",
+    "ground_truth": "Ambedkar Dukkipati is mentoring 4 students."
+  },
+  {
+    "question": "Who has exactly 3 students assigned under their mentorship?",
+    "answer": "Aditya Gopalan, Shalabh Bhatnagar, Venkatesh Babu, and Anirban Chakraborty each have exactly 3 students assigned under their mentorship.",
+    "ground_truth": "Aditya Gopalan and Shalabh Bhatnagar each have 3 students."
+  },
+  {
+    "question": "Does Chandra Sekhar Seelamantula have more students than Ambedkar Dukkipati?",
+    "answer": "No, Chandra Sekhar Seelamantula has 5 students assigned to him, while Ambedkar Dukkipati has 4 students. Therefore, Chandra Sekhar Seelamantula has more students than Ambedkar Dukkipati.",
+    "ground_truth": "Chandra Sekhar Seelamantula has 5 students, one more than Ambedkar Dukkipati who has 4."
+  },
+  {
+    "question": "Which faculty mentor is associated with the email shalabh@iisc.ac.in?",
+    "answer": "The faculty mentor associated with the email shalabh@iisc.ac.in is Shalabh Bhatnagar.",
+    "ground_truth": "The email shalabh@iisc.ac.in belongs to Shalabh Bhatnagar."
+  },
+  {
+    "question": "What is the highest number of students assigned to any faculty mentor?",
+    "answer": "The highest number of students assigned to any faculty mentor is 6, assigned to Ratikanta Behera.",
+    "ground_truth": "The highest number of students assigned is 6."
+  },
+  {
+    "question": "Is Punit Rathore at the mentorship limit?",
+    "answer": "Yes, Punit Rathore is at the mentorship limit, as he has 6 students assigned to him.",
+    "ground_truth": "Punit Rathore has reached the maximum limit of 6 students."
+  },
+  {
+    "question": "Are there any mentors with fewer than 4 students?",
+    "answer": "Yes, there is one mentor with fewer than 4 students: Shalabh Bhatnagar, who has 3 students assigned.",
+    "ground_truth": "Aditya Gopalan and Shalabh Bhatnagar are mentoring fewer than 4 students."
+  },
+  {
+    "question": "Who completed the project titled 'Outlier Detection in Firewall Health'?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The project was completed by MANISH S B."
+  },
+  {
+    "question": "Which student worked on 'GRANO-GAN Gradient Normalized Anomaly Detection'?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "NAVEEN RUDRAPPA worked on the GRANO-GAN project."
+  },
+  {
+    "question": "What stream was Anwesha Mohanty enrolled in?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Anwesha Mohanty was enrolled in the M.Tech (Online) AI stream."
+  },
+  {
+    "question": "In which term was the project 'Real Time Unsupervised Defection Detection and Reporting' completed?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The project was completed in Summer 2023."
+  },
+  {
+    "question": "Who mentored the project on endpoint anomaly detection?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prathosh A P was the faculty mentor for the endpoint anomaly detection project."
+  },
+  {
+    "question": "Which student was mentored by Shashi Jain?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Shashi Jain mentored NAVEEN RUDRAPPA."
+  },
+  {
+    "question": "Who is the faculty mentor for the project on firewall health?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Haresh Dagale mentored the firewall health project."
+  },
+  {
+    "question": "What was the title of the project completed by KOUSHIK P G?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "KOUSHIK P G worked on 'Anomaly detection in the behaviour of endpoint processes'."
+  },
+  {
+    "question": "Who was the mentor for the project titled 'User Cold-Start Recommendation using Reinforcement Learning'?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The mentor for the cold-start recommendation project was Shalabh Bhatnagar."
+  },
+  {
+    "question": "Which student worked under Chandra Sekhar Seelamantula?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "PARTH DHIR was mentored by Chandra Sekhar Seelamantula."
+  },
+  {
+    "question": "What is the duration of the January–April 2025 term?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The standard academic session runs from 01.01.2025 to 30.04.2025."
+  },
+  {
+    "question": "When do classes begin in the January 2025 term?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The first day of classes is 01.01.2025."
+  },
+  {
+    "question": "What are the course registration dates for January 2025 term?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Course registration is allowed from 01.01.2025 to 15.01.2025."
+  },
+  {
+    "question": "By when must DCC and instructors approve course registrations?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The last date for DCC and instructor approval of course registration is 17.01.2025."
+  },
+  {
+    "question": "When is course registration auto-approved?",
+    "answer": "Course registration is auto-approved during the following time periods: 10.05.2025, 03.06.2025, and 17.06.2025.",
+    "ground_truth": "Auto approval of course registration is on 18.01.2025."
+  },
+  {
+    "question": "What are the dates for course dropping without mention?",
+    "answer": "The dates for course dropping without mention are from 11.05.2025 to 30.05.2025.",
+    "ground_truth": "Course dropping without mention is permitted from 19.01.2025 to 21.02.2025."
+  },
+  {
+    "question": "When is course dropping without mention auto-approved?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Auto approval for course dropping without mention is on 25.02.2025."
+  },
+  {
+    "question": "When will the end term examination be held?",
+    "answer": "The end term examination will be held on 27.06.2025.",
+    "ground_truth": "The end term examination is scheduled from 21.04.2025 to 30.04.2025."
+  },
+  {
+    "question": "What is the last day of classes for the term?",
+    "answer": "The last day of classes for the term is 25.06.2025.",
+    "ground_truth": "The last day of classes is 11.04.2025."
+  },
+  {
+    "question": "When will exam results be published?",
+    "answer": "Exam results will be published on 17th July 2025.",
+    "ground_truth": "Exam results will be published on 20.05.2025."
+  },
+  {
+    "question": "What are the start and end dates of the Summer Term 2025?",
+    "answer": "The Summer Term 2025 starts on 01.05.2025 and ends on 30.06.2025.",
+    "ground_truth": "The Summer Term runs from 01.05.2025 to 30.06.2025."
+  },
+  {
+    "question": "When does course registration start and end?",
+    "answer": "Course registration starts on 01 May 2025 and ends on 07 May 2025.",
+    "ground_truth": "Course registration is from 01.05.2025 to 07.05.2025."
+  },
+  {
+    "question": "What is the first day of classes in the Summer Term 2025?",
+    "answer": "The first day of classes in the Summer Term 2025 is on 01.05.2025.",
+    "ground_truth": "The first day of classes is 01.05.2025."
+  },
+  {
+    "question": "By when must course registration be approved by DCC and instructors?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Course registration approvals are due by 09.05.2025."
+  },
+  {
+    "question": "When will course registration be auto-approved if no action is taken?",
+    "answer": "Course registration will be auto-approved on the following dates if no action is taken: 10.05.2025 and 03.06.2025.",
+    "ground_truth": "Auto approval of course registration is on 10.05.2025."
+  },
+  {
+    "question": "What is the window for dropping a course without mention?",
+    "answer": "The window for dropping a course without mention is from 11.05.2025 to 30.05.2025.",
+    "ground_truth": "Course dropping without mention is allowed from 11.05.2025 to 30.05.2025."
+  },
+  {
+    "question": "When is course dropping without mention auto-approved?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Auto approval of course dropping without mention is on 03.06.2025."
+  },
+  {
+    "question": "What are the dates for dropping a course with mention?",
+    "answer": "The dates for dropping a course with mention are from 04.06.2025 to 13.06.2025.",
+    "ground_truth": "Course dropping with mention is between 04.06.2025 and 13.06.2025."
+  },
+  {
+    "question": "When will the end term exam be held?",
+    "answer": "The end term examination will be held on June 27, 2025.",
+    "ground_truth": "The end term examination is scheduled for 27.06.2025."
+  },
+  {
+    "question": "When will exam results be published?",
+    "answer": "Exam results will be published on 17th July 2025.",
+    "ground_truth": "Exam results will be published on 17.07.2025."
+  },
+  {
+    "question": "Who is the M.Tech. (Online) Coordinator?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Yogesh Simmhan is the M.Tech. (Online) Coordinator."
+  },
+  {
+    "question": "What is Prof. Yogesh Simmhan's department?",
+    "answer": "Prof. Yogesh Simmhan's department is CDS.",
+    "ground_truth": "Prof. Yogesh Simmhan is from the CDS department."
+  },
+  {
+    "question": "What is the contact email for the IKEN Office?",
+    "answer": "The contact email for the IKEN Office is office.iken@iisc.ac.in.",
+    "ground_truth": "IKEN Office can be reached at office.iken@iisc.ac.in."
+  },
+  {
+    "question": "Who chairs the Programme Coordination Committee?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. G L Sivakumar Babu is the chair of the Programme Coordination Committee."
+  },
+  {
+    "question": "Which department is Prof. G L Sivakumar Babu from?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. G L Sivakumar Babu is from Civil Engineering."
+  },
+  {
+    "question": "Name a faculty member on the AI stream PCC from RBCCPS.",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Dr. Shishir N Y is on the AI stream PCC from RBCCPS."
+  },
+  {
+    "question": "Who is the convenor of the AI Stream PCC?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Chandramani Singh is the convenor of the AI Stream PCC."
+  },
+  {
+    "question": "Which department is Prof. Chandramani Singh associated with?",
+    "answer": "Prof. Chandramani Singh is associated with the Department of DESE.",
+    "ground_truth": "Prof. Chandramani Singh is from the ESE department."
+  },
+  {
+    "question": "Who is the convenor of the DSBA Stream PCC?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Dr. Deepak Subramani is the convenor of the DSBA Stream PCC."
+  },
+  {
+    "question": "What is Dr. Deepak Subramani’s email?",
+    "answer": "Dr. Deepak Subramani’s email is deepakns@iisc.ac.in.",
+    "ground_truth": "Dr. Deepak Subramani can be contacted at deepakns@iisc.ac.in."
+  },
+  {
+    "question": "Who is a member of both DSBA PCC and the Management Studies department?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Dr. Shashi Jain is on the DSBA PCC and from Management Studies."
+  },
+  {
+    "question": "Who is the convenor of the ECE Stream PCC?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Dr. Sundeep Chepuri is the convenor of the ECE Stream PCC."
+  },
+  {
+    "question": "Which ECE faculty member also holds a Dean position?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Rajesh Sundaresan is Dean of EECS and part of the ECE faculty."
+  },
+  {
+    "question": "Who is the Chair of ECE?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. K J Vinoy is the Chair of ECE."
+  },
+  {
+    "question": "Name an Assistant Registrar for Academics - I.",
+    "answer": "Mr. A. Nitin Anand is the Assistant Registrar, Academic (Ex-Officio Member Secretary).",
+    "ground_truth": "Mr. Anoop Yadav is Assistant Registrar for Academics - I."
+  },
+  {
+    "question": "Who provides technical support in IKEN?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Selvam Raja and Guruprakash are part of IKEN’s technical support team."
+  },
+  {
+    "question": "Who is the Dean of the Faculty of Science?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. S Asokan is the Dean of the Faculty of Science."
+  },
+  {
+    "question": "Name the Dean of Interdisciplinary Sciences.",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Navakanta Bhat is the Dean of the Division of Interdisciplinary Sciences."
+  },
+  {
+    "question": "Who provides administrative support at IKEN?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Bharath M and Archana Kumar provide administrative support at IKEN."
+  },
+  {
+    "question": "Who is the consultant on the IKEN team?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Akanksha Sood is a consultant in the IKEN team."
+  },
+  {
+    "question": "Who is the M.Tech. (Online) Coordinator?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Yogesh Simmhan is the M.Tech. (Online) Coordinator."
+  },
+  {
+    "question": "What is the email for contacting the IKEN Office?",
+    "answer": "The email for contacting the IKEN Office is office.iken@iisc.ac.in.",
+    "ground_truth": "IKEN Office can be contacted at office.iken@iisc.ac.in."
+  },
+  {
+    "question": "Who is the Dean of the Faculty of Engineering?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Jayant Modak is the Dean, Faculty of Engineering."
+  },
+  {
+    "question": "Who chairs the M.Tech. (Online) Programme Co-ordination Committee?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. G L Sivakumar Babu chairs the M.Tech. (Online) Programme Co-ordination Committee."
+  },
+  {
+    "question": "Who is the convenor for the AI Stream Program Curriculum Committee?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Chandramani Singh is the convenor of the AI Stream PCC."
+  },
+  {
+    "question": "Which department is Dr. Deepak Subramani from?",
+    "answer": "Dr. Deepak Subramani is from the CDS department.",
+    "ground_truth": "Dr. Deepak Subramani is from the CDS department."
+  },
+  {
+    "question": "Who is the convenor of the DSBA stream?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Dr. Deepak Subramani is the convenor of the DSBA stream."
+  },
+  {
+    "question": "Which ECE faculty member is also Dean of the Division of EECS?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Prof. Rajesh Sundaresan is the Dean of the Division of Electrical, Electronics and Computer Sciences."
+  },
+  {
+    "question": "Who provides administrative support at IKEN?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Bharath M and Archana Kumar provide administrative support at IKEN."
+  },
+  {
+    "question": "Name one Assistant Registrar in Academics.",
+    "answer": "One Assistant Registrar in Academics is Mr. A. Nitin Anand.",
+    "ground_truth": "Mr. Anoop Yadav is an Assistant Registrar in Academics - I."
+  },
+  {
+    "question": "What does an 'F' grade indicate?",
+    "answer": "An 'F' grade indicates a failing grade. A student cannot graduate until they clear it by either repeating the same course or taking a substitute course, as decided by the DCC. If a student receives an 'F' grade in the repetition or replacement course, they must leave the programme. Both the initial 'F' and the final higher grade will be reflected in the transcript.",
+    "ground_truth": "'F' is a failing grade."
+  },
+  {
+    "question": "Can a student graduate with an uncleared 'F' grade?",
+    "answer": "No, a student cannot graduate with an uncleared 'F' grade. They must clear the 'F' grade by either repeating the same course or taking a substitute course, as stated in the context.",
+    "ground_truth": "A student cannot graduate until they clear an 'F' grade."
+  },
+  {
+    "question": "How many chances are given to clear an 'F' grade?",
+    "answer": "Only one chance is given to clear an 'F' grade. If the student receives an 'F' grade again upon repeating the course or in a replacement course, they will not be allowed to continue in the programme.",
+    "ground_truth": "Only one chance is provided to the student to clear the ‘F’ grade."
+  },
+  {
+    "question": "What happens if a student fails again while clearing an 'F' grade?",
+    "answer": "If a student fails again while trying to clear an 'F' grade, they will not be allowed to continue in the programme. Only one chance is provided to clear the 'F' grade, and if the student receives an 'F' in the repetition or in a substitute course, they must leave the programme.",
+    "ground_truth": "If the student gets an ‘F’ again, they will not be allowed to continue in the programme."
+  },
+  {
+    "question": "Can a student retake a course to improve a passing grade?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Repetition of courses is permitted only to clear ‘F’ grades."
+  },
+  {
+    "question": "What type of course must be repeated if an 'F' is obtained in a hardcore course?",
+    "answer": "If an 'F' is obtained in a hardcore course, the same course must be repeated.",
+    "ground_truth": "If the ‘F’ grade is obtained in a hardcore course, the same course must be repeated."
+  },
+  {
+    "question": "Is a student eligible for distinction after getting an 'F' grade?",
+    "answer": "No, a student is not eligible for the award of Distinction after getting an 'F' grade, even if they clear the 'F' grade to graduate with a degree.",
+    "ground_truth": "Getting an ‘F’ grade makes the student ineligible for the award of Distinction."
+  },
+  {
+    "question": "How is an 'F' grade treated in CGPA computation after it is cleared?",
+    "answer": "After an 'F' grade is cleared, it will be omitted from the TGPA computation, and the grade from the repeated or substitute course will replace it in the CGPA computation.",
+    "ground_truth": "The ‘F’ grade will be omitted from TGPA and replaced in CGPA computation."
+  },
+  {
+    "question": "What is required to get an 'X' grade instead of an 'F' due to medical reasons?",
+    "answer": "To receive an 'X' grade instead of an 'F' due to medical reasons, a student must submit a medical certificate certified by the Chief Medical Officer (CMO) of the Institute. If this certificate is not provided, an 'F' grade will be awarded.",
+    "ground_truth": "Students must submit a medical certificate certified by the CMO to receive an ‘X’ grade."
+  },
+  {
+    "question": "What happens if the ‘X’ grade is not cleared within the deadline?",
+    "answer": "If the ‘X’ grade is not cleared within the deadline, it will lapse and be converted to an ‘F’ grade at the end of this timeframe, unless there is any further certified medical reason.",
+    "ground_truth": "The ‘X’ grade will lapse and be converted to an ‘F’ grade after the deadline."
+  },
+  {
+    "question": "What is the application fee for the M.Tech (Online) program?",
+    "answer": "The application fee for the M.Tech (Online) program is Rs. 2000/-, and it is non-refundable, even if you are not called for an interview.",
+    "ground_truth": "The application fee for the M.Tech (Online) program is ₹2,000."
+  },
+  {
+    "question": "How much is the tuition fee per course credit?",
+    "answer": "The tuition fee per course credit is 22,500.",
+    "ground_truth": "The tuition fee is ₹22,500 for each course credit."
+  },
+  {
+    "question": "What is the project credit fee?",
+    "answer": "The project credit fee is 5,000/project-credit.",
+    "ground_truth": "The project credit fee is ₹5,000."
+  },
+  {
+    "question": "What is the annual academic fee?",
+    "answer": "The annual academic fee for regular and QIP full-time students is 3,700 INR. For PhD – ERP candidates, the other academic fees payable annually while enrolled in the degree program is also 3,700 INR.",
+    "ground_truth": "The academic fee payable annually is ₹3,700."
+  },
+  {
+    "question": "How much is the statutory deposit?",
+    "answer": "The statutory deposit is 7,500/-.",
+    "ground_truth": "The one-time statutory deposit is ₹7,500, refundable at graduation."
+  },
+  {
+    "question": "What is the library deposit amount?",
+    "answer": "The library deposit amount is 7,500/-, payable one time per student at the time of admission and refundable upon graduation.",
+    "ground_truth": "The library deposit is ₹7,500 and is refundable."
+  },
+  {
+    "question": "What is the estimated total fee for the AI stream?",
+    "answer": "The estimated total fee for the Artificial Intelligence stream is Rs. 9.6 lac.",
+    "ground_truth": "The anticipated cost for the Artificial Intelligence stream is ₹9,78,600."
+  },
+  {
+    "question": "How long is the nominal duration for each stream?",
+    "answer": "The nominal duration to complete the degree programme is between two and three years.",
+    "ground_truth": "The nominal registration period for each stream is 3 years."
+  },
+  {
+    "question": "What is the registration fee for the full duration?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The total registration fee for 3 years is ₹11,100."
+  },
+  {
+    "question": "What is the minimum course credit requirement for AI stream?",
+    "answer": "The minimum course credit requirement for the AI stream is 20 credits, as students may take courses from any of the three streams as electives, with at least 20 credits needed.",
+    "ground_truth": "The Artificial Intelligence stream requires a minimum of 37 course credits."
+  },
+  {
+    "question": "What is the project credit requirement for Data Science stream?",
+    "answer": "The project credit requirement for the Data Science stream is 32 credits.",
+    "ground_truth": "The Data Science and Business Analytics stream needs 32 project credits."
+  },
+  {
+    "question": "What is the anticipated cost for the ECE stream?",
+    "answer": "The anticipated cost for the ECE stream is about 8.8–10 lakhs for the full duration of the program, depending on the stream and credits taken. The fee is paid progressively during each semester.",
+    "ground_truth": "The Electronics and Communication Engineering stream costs ₹9,61,100."
+  },
+  {
+    "question": "How are term fees calculated?",
+    "answer": "The term fees are part of the overall fee structure, which amounts to about 8.8–10 lakhs for the full duration of the program, depending on the stream and credits taken. The fee is paid progressively during each semester. Additionally, students are required to pay fees for break semesters to keep their registration alive.",
+    "ground_truth": "Term-wise fees depend on the number of registered course and project credits."
+  },
+  {
+    "question": "When is the annual academic fee due?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "The annual academic fee is payable in the August term."
+  },
+  {
+    "question": "What is the payment deadline after the fee request?",
+    "answer": "The payment deadline after the fee request is not explicitly mentioned in the provided documents. However, students must submit their scholarship request to the department by the 15th day of the month to receive payment, and the request should be initiated between the 6th and 15th of each month. I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Students must pay the fee within 30 days of the request being raised."
+  },
+  {
+    "question": "Where can students view fee payment requests?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Fee requests are posted on the Receipts Portal."
+  },
+  {
+    "question": "When is the receipt available after payment?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Receipts are auto-generated within 5 days after successful fee payment."
+  },
+  {
+    "question": "Who to contact for payment issues?",
+    "answer": "I'm sorry, the information is not available in the provided documents.",
+    "ground_truth": "Contact receipts.fna@iisc.ac.in and copy office.iken@iisc.ac.in for payment issues."
+  },
+  {
+    "question": "Will fees be refunded if a course is dropped after the deadline?",
+    "answer": "No, the fees will not be refunded if a course is dropped after the deadline.",
+    "ground_truth": "Course fees are not refunded if dropped after the drop-without-mention deadline."
+  },
+  {
+    "question": "What happens to the fee if a course is dropped before the deadline?",
+    "answer": "If a course is dropped before the deadline during the 'course drop without mention' period, the dropped course will not be listed in the final transcript. However, the fees will not be refunded, and the student may register again for the course in a future term, with fees payable for that registration.",
+    "ground_truth": "Fees for dropped courses before the deadline are retained as credit for future terms."
+  }
+]
