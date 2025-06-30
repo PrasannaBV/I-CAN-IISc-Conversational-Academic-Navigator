@@ -37,6 +37,11 @@ Project Structure
 └── setup.py # Package installation and distribution config
 
 
+
+
+
+The code for the respective features is in different branches as mentioned below.
+
 main/
 │
 ├── master/                 # MVP ready code base, core pipeline
